@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @keyframes fadein{
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="alan">
+            <button onclick="ekle()">Ekle</button>
+            <ul id="liste">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+            </ul>
+        </div>
+        <script>
+            function ekle(){
+                var elemanolustur = document.createElement("LI");
+                var icerik = document.createTextNode("PHP");
+                elemanolustur.appendChild(icerik);
+                var islem=document.getElementById("liste").appendChild(elemanolustur);
+                islem.style.animation="fadein 4s";
+            }
+        </script>
+    </body>
+</html>
