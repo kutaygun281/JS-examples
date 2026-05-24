@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input name="anket" type="checkbox">
+        <label for="anket">Deneme1</label>
+        <input name="anket" type="checkbox">
+        <label for="anket">Deneme2</label>
+        <button onclick="temizle()">Temizle</button>
+
+        <script>
+            var deger =[];
+            deger = document.getElementsByName("anket");
+
+            function temizle(){
+            for(var baslangic=0;baslangic<deger.length;baslangic++){
+                deger[baslangic].checked = false;
+            }
+        }
+
+        </script>
+    </body>
+</html>
