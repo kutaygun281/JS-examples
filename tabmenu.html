@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            ul{
+                display: flex;
+                list-style-type: none;
+            }
+            ul li{
+                border: 1px solid black;
+            }
+            ul li div{
+                display: none;
+            }
+            #bir{
+                display: none;
+            }
+            #iki{
+                display: none;
+            }
+            #uc{
+                display: none;
+            }
+            #alan{
+                width: 250px;
+                height: 150px;
+                border: 1px solid black;
+            }
+        </style>
+
+    </head>
+    <body>
+        <ul>
+            <li onclick="goster('bir')">Javascript</li>
+            <li onclick="goster('iki')">CSS</li>
+            <li onclick="goster('uc')">HTML</li>
+        </ul>
+        <div id="alan">
+            <div id="bir">javascript %99</div>
+            <div id="iki">CSS %100</div> 
+            <div id="uc">HTML %100</div>
+
+        </div>
+
+        <script>
+            function goster(deger){
+                const ids = ["bir", "iki", "uc"];
+
+                 ids.forEach(id => {
+                 document.getElementById(id).style.display =
+                id === deger ? "block" : "none";
+                    });
+                }
+        </script>
+
+    </body>
+</html>
