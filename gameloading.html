@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #container{
+                width: 150px;
+                height: 250px;
+                position: relative;
+            }
+
+            #hogwarts{
+                width: 150px;
+                height: 250px;
+                object-fit: cover;
+            }
+            #kutu{
+                width: 100%;
+                height: 250px;
+                opacity: 0.7;
+                background-color: gray;
+                position: absolute;
+                right: 0px;
+                top: 0;
+                z-index: 99;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div id="container"><img id="hogwarts" src="hogwarts.jpg"><div id="kutu"></div></div>
+        <script>
+            var sayac = 100
+            setInterval(()=>{
+                var sonuc = sayac+"%";
+                document.getElementById("kutu").style.width=sonuc;
+                sayac-=10
+            },2000);
+        </script>
+    </body>
+</html>
