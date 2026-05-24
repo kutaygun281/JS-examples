@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="alan">
+            <button onclick="ekle()">Ekle</button>
+            <ul id="liste">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+            </ul>
+        </div>
+        <script>
+            function ekle(){
+                var elemanolustır = document.createElement("LI");
+                var icerik = document.createTextNode("PHP");
+                elemanolustır.appendChild(icerik);
+                document.getElementById("liste").appendChild(elemanolustır);
+            }
+        </script>
+    </body>
+</html>
