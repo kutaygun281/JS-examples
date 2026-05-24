@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+   
+    <style>
+        :root {
+            --clr-background: #eceff1;
+            --clr-base: #e0d0d0;
+            --clr-primary: black;
+        }
+        body{
+            background-color:var(--clr-background);
+        }
+        .navbar{
+            width:100%;
+            background-color:var(--clr-base);
+            ul{
+                display:flex;
+                justify-content:flex-end;
+                align-items:center;
+                list-style:none;
+               }
+              ul li{
+                  font-weight:bold;
+                  padding-right:2em;
+		color:var(--clr-primary);
+              }
+              ul li:first-child{
+                  margin-right:auto;
+              }
+        }
+        .header{
+            display:flex;
+            justify-content:space-between;
+            margin-right:2em;
+            margin-left:2em;
+            align-items:center;
+           
+        }
+        .header div h1{
+            color:var(--clr-primary);
+        }
+        .article{
+            display:grid;
+            grid-template-columns:auto auto auto;
+        }
+        .article-box {
+            border-top:5px solid #808080;
+            background-color:var(--clr-base);
+            margin:2em;
+            padding:1em;
+            border-radius:25px;
+            color:var(--clr-primary);
+        }
+        .article-header{
+            color:var(--clr-primary);
+            font-weight:bold;
+        }
+        @media only screen and (max-width: 576px){
+            .article{
+                grid-template-columns:auto;
+            }
+        }
+        .dark-mode{
+            --clr-background:#236238;
+            --clr-base:black;
+            --clr-primary:#4cff00;
+            
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="navbar">
+        <ul>
+            <li><img src="nav.svg" /></li>
+            <li>Main page</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="wrapper-main">
+        <div class="wrapper-color-switch">
+            <input type="checkbox" id="input-color-switch" />
+            <label for="input-color-switch">Click to change color</label>
+        </div>
+        <div class="header">
+
+            <div><h1>Page Header</h1></div>
+            <div><img src="search.svg" /><input type="text" placeholder="Search" /></div>
+        </div>
+        <div class="article">
+            <div class="article-box">
+                <div class="article-date">Nov, 13, 2025</div>
+                <div class="article-header">Header</div>
+                <div class="article-article">
+                    Etiam congue dolor eros, non consequat enim mollis vel.
+                    Vivamus vel laoreet eros. Donec ipsum mi, vehicula id nunc sagittis, pellentesque
+                    hendrerit magna. Nulla congue, dolor sit amet aliquam pulvinar, elit magna elementum
+                    turpis, id venenatis ipsum mi id ipsum. Curabitur luctus pellentesque sapien ut
+                    commodo. Vestibulum placerat eros eget pretium euismod.
+                </div>
+            </div>
+            <div class="article-box">
+                <div class="article-date">Nov, 13, 2025</div>
+                <div class="article-header">Header</div>
+                <div class="article-article">
+                    Etiam congue dolor eros, non consequat enim mollis vel.
+                    Vivamus vel laoreet eros. Donec ipsum mi, vehicula id nunc sagittis, pellentesque
+                    hendrerit magna. Nulla congue, dolor sit amet aliquam pulvinar, elit magna elementum
+                    turpis, id venenatis ipsum mi id ipsum. Curabitur luctus pellentesque sapien ut
+                    commodo. Vestibulum placerat eros eget pretium euismod.
+                </div>
+            </div>
+            <div class="article-box">
+                <div class="article-date">Nov, 13, 2025</div>
+                <div class="article-header">Header</div>
+                <div class="article-article">
+                    Etiam congue dolor eros, non consequat enim mollis vel.
+                    Vivamus vel laoreet eros. Donec ipsum mi, vehicula id nunc sagittis, pellentesque
+                    hendrerit magna. Nulla congue, dolor sit amet aliquam pulvinar, elit magna elementum
+                    turpis, id venenatis ipsum mi id ipsum. Curabitur luctus pellentesque sapien ut
+                    commodo. Vestibulum placerat eros eget pretium euismod.
+                </div>
+            </div>
+            <div class="article-box">
+                <div class="article-date">Nov, 13, 2025</div>
+                <div class="article-header">Header</div>
+                <div class="article-article">
+                    Etiam congue dolor eros, non consequat enim mollis vel.
+                    Vivamus vel laoreet eros. Donec ipsum mi, vehicula id nunc sagittis, pellentesque
+                    hendrerit magna. Nulla congue, dolor sit amet aliquam pulvinar, elit magna elementum
+                    turpis, id venenatis ipsum mi id ipsum. Curabitur luctus pellentesque sapien ut
+                    commodo. Vestibulum placerat eros eget pretium euismod.
+                </div>
+            </div>
+            <div class="article-box">
+                <div class="article-date">Nov, 13, 2025</div>
+                <div class="article-header">Header</div>
+                <div class="article-article">
+                    Etiam congue dolor eros, non consequat enim mollis vel.
+                    Vivamus vel laoreet eros. Donec ipsum mi, vehicula id nunc sagittis, pellentesque
+                    hendrerit magna. Nulla congue, dolor sit amet aliquam pulvinar, elit magna elementum
+                    turpis, id venenatis ipsum mi id ipsum. Curabitur luctus pellentesque sapien ut
+                    commodo. Vestibulum placerat eros eget pretium euismod.
+                </div>
+            </div>
+            <div class="article-box">
+                <div class="article-date">Nov, 13, 2025</div>
+                <div class="article-header">Header</div>
+                <div class="article-article">
+                    Etiam congue dolor eros, non consequat enim mollis vel.
+                    Vivamus vel laoreet eros. Donec ipsum mi, vehicula id nunc sagittis, pellentesque
+                    hendrerit magna. Nulla congue, dolor sit amet aliquam pulvinar, elit magna elementum
+                    turpis, id venenatis ipsum mi id ipsum. Curabitur luctus pellentesque sapien ut
+                    commodo. Vestibulum placerat eros eget pretium euismod.
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+ <script type="text/javascript" language="javascript">
+        const colorSwitch = document.getElementById("input-color-switch");
+        colorSwitch.addEventListener("click", checkMode);
+        function checkMode() {
+            console.log('Checking...');
+            if (colorSwitch.checked) {
+                console.log('dark on');
+                darkModeOn();
+            }
+            else {
+                console.log('dark off');
+                darkModeOff();
+            }
+        }
+        function darkModeOn() {
+            document.body.classList.add("dark-mode");
+        }
+        function darkModeOff() {
+            document.body.classList.remove("dark-mode");
+        }
+
+    </script>
+</body>
+</html>
