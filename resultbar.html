@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #resultalani{
+                height: 20px;
+                width: 500px;
+            }
+
+            @keyframes anima{
+                from{
+                    width:0px ;
+                    height: 20px;
+                    background-color:gray;
+                }
+                to{
+                    width:var(--target-distance, 100px);
+                    height: 20px;
+                    background-color:green;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <input id="alan" type="text" name="alan">
+        <button id="btn" onclick="ornek()">Submit</button>
+        <div id="uyari"></div>
+        <div id="resultalani"></div>
+        <script>
+                function ornek(){
+                var deger = document.getElementById("alan").value;
+                var elemanolustur=document.createElement("DIV");
+                var icerik = document.createTextNode(deger + "%");
+                elemanolustur.appendChild(icerik);
+                var islem = document.getElementById("resultalani").appendChild(elemanolustur);
+                document.documentElement.style.setProperty('--target-distance', deger +"px");
+                islem.style.animation="anima 4s forwards";
+                };
+        </script>
+    </body>
+</html>
