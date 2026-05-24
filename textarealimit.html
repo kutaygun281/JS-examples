@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <textarea id="metinkutusu" maxlength="50"></textarea>
+        <div>>Kalan karakter <span id="kalan"></span></div>
+        <div>Yazılan karakter <span id="yazilan"></span></div>
+        <script>
+            document.getElementById("metinkutusu").addEventListener("input", function() {
+                var karaktersayisi = this.value.length;
+                document.getElementById("yazilan").innerHTML= karaktersayisi;
+                var kalankarakter = 50 - karaktersayisi;
+                document.getElementById("kalan").innerHTML = kalankarakter;
+                });  
+
+                var kalankarakter = 50 - karaktersayisi
+        </script>
+    </body>
+</html>
