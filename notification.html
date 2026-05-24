@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *,
+            *::after,
+            *::before{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body{
+                height: 100vh;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                color: gray;
+            }
+
+            button{
+                border: none;
+                cursor: pointer;
+            }
+            .btn-primary{
+                background-color: blue;
+                border-radius: 0.2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.5rem;
+                color: white;
+                padding: 0.5rem;
+            }
+            .btn-secondary{
+                background-color: transparent;
+
+            }
+            .notification{
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                background-color: bisque;
+                border-radius: 0.2rem;
+                overflow: hidden;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                height: 50px;
+            }
+            .notification__close{
+                background-color: beige;
+                cursor: pointer;
+            }
+            .notification-show{
+                animation: warning 400ms ease-in-out forwards;
+                display: flex;
+            }
+            @keyframes warning{
+                0%{opacity: 0;
+                top: 0;}
+                5%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                    top: 2rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <button class="btn-primary" id="delete">Delete</button>
+        <div id="notification" class="notification">
+            <p>Item has been deleted</p>
+            <button class="btn-secondary">Undo</button> 
+            <div id="close" class="notification__close"><p>Close</p></div>
+        </div>
+        <script>
+            const deleteBtn = document.getElementById("delete");
+            const notification = document.getElementById("notification");
+            const closeBtn = document.getElementById("close");
+
+            deleteBtn.addEventListener("click", ()=>{
+                notification.classList.add("notification-show");
+            })
+
+            closeBtn.addEventListener("click", ()=>{
+                notification.classList.remove("notification-show");
+            })
+        </script>
+    </body>
+</html>
